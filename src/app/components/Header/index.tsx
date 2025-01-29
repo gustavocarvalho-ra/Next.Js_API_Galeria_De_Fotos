@@ -1,5 +1,10 @@
+import { Head } from "./styles";
+
 export default function Header() {
   return (
-    <h1>test herder</h1>
+    <Head>
+      <h1>test herder</h1>
+
+    </Head>
   )
 }
