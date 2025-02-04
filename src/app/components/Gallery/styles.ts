@@ -7,5 +7,5 @@ export const Gall = styled.div `
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5em;
+  margin: 5em 5em 4em 5em;
 `
