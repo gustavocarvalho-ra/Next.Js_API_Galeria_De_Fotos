@@ -1,5 +1,20 @@
-// import { createApi } from "unsplash-js";
+import { NextResponse } from "next/server";
+import { unsplash } from "@/lib/unsplash";
 
-// const serverApi = createApi({
-//   accessKey: "yNT-fiOwvVfSiXYOdRXtyLnH3h12vro_dsS9ay56NIg",
-// });
+export async function GET(req: Request) {
+  const { searchParams } = new URL(req.url);
+  const query = searchParams.get("query") || "nature";
+
+  try {
+    const result = await unsplash.search.getPhotos({
+      query,
+      perPage: 10,
+    });
+
+    if (result.errors) {
+      return NextResponse.json({ error: result.errors }, { status: 400});
+    }
+
+    return NextResponse.json(result.response.results);
+  }
+}
