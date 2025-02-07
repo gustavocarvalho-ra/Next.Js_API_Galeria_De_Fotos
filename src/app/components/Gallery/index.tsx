@@ -7,7 +7,7 @@ import Image from "next/image";
 interface imageprops{
   id: string;
   alt_description: string;
-  urls: any;
+  urls: {small: string};
 }
 
 export default function Gallery() {
