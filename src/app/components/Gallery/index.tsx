@@ -4,8 +4,13 @@ import { useState, useEffect} from "react";
 import { Gall } from "./styles";
 import Image from "next/image";
 
+interface imageprops{
+  id: string;
+  alt_description:string
+}
+
 export default function Gallery() {
-  const [images, setImages] = useState<any[]>([]);
+  const [images, setImages] = useState<imageprops[]>([{alt_description: 'seila',id:'oi'}]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -24,13 +29,12 @@ export default function Gallery() {
   return (
     <Gall>
       {images.map((image) => (
-        <Image
+        <i
           width={700}
           height={500}
           key={image.id}
           src={image.urls.small}
           alt={image.alt_description}
-          className="rounded-lg shadow-md w-full h-auto"
         />
       ))}
 
