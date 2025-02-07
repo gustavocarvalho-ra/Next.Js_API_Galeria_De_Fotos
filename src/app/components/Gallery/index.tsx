@@ -6,11 +6,12 @@ import Image from "next/image";
 
 interface imageprops{
   id: string;
-  alt_description:string
+  alt_description: string;
+  urls: any;
 }
 
 export default function Gallery() {
-  const [images, setImages] = useState<imageprops[]>([{alt_description: 'seila',id:'oi'}]);
+  const [images, setImages] = useState<imageprops[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -19,7 +20,10 @@ export default function Gallery() {
       const data = await response.json();
       setImages(data);
       setLoading(false);
+
+      console.log(data)
     }
+
 
     fetchImages();
   }, []);
@@ -29,7 +33,7 @@ export default function Gallery() {
   return (
     <Gall>
       {images.map((image) => (
-        <i
+        <Image
           width={700}
           height={500}
           key={image.id}
