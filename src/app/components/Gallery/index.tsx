@@ -1,14 +1,9 @@
 "use client"
 import { useState, useEffect} from "react";
+import Image from "next/image";
+import { imageprops } from './../../types/imag';
 
 import { Gall } from "./styles";
-import Image from "next/image";
-
-interface imageprops{
-  id: string;
-  alt_description: string;
-  urls: {small: string};
-}
 
 export default function Gallery() {
   const [images, setImages] = useState<imageprops[]>([]);
@@ -23,7 +18,6 @@ export default function Gallery() {
 
       console.log(data)
     }
-
 
     fetchImages();
   }, []);
