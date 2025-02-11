@@ -8,4 +8,5 @@ export const Gall = styled.div `
   align-items: center;
   justify-content: center;
   margin: 5em 5em 4em 5em;
+  gap: 1em;
 `
