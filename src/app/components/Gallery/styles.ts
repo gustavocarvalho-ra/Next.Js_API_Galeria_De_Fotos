@@ -5,6 +5,7 @@ export const Gall = styled.div `
   height: 85vh;
   background-color: red;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 5em 5em 4em 5em;

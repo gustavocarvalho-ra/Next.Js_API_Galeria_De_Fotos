@@ -28,8 +28,8 @@ export default function Gallery() {
     <Gall>
       {images.map((image) => (
         <Image
-          width={700}
-          height={500}
+          width={400}
+          height={250}
           key={image.id}
           src={image.urls.small}
           alt={image.alt_description}
