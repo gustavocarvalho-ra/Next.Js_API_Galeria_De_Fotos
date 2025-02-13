@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const Gall = styled.div `
-  width: 90%;
-  height: 75vh;
+  width: 95%;
+  height: 85vh;
   background-color: red;
   display: flex;
   align-items: center;
