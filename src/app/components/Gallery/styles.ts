@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Gall = styled.div `
   width: 95%;
-  height: 85vh;
+  height: 150vh;
   background-color: red;
   display: flex;
   flex-wrap: wrap;

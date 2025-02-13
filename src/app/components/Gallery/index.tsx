@@ -29,7 +29,7 @@ export default function Gallery() {
       {images.map((image) => (
         <Image
           width={400}
-          height={250}
+          height={267}
           key={image.id}
           src={image.urls.small}
           alt={image.alt_description}
