@@ -28,7 +28,7 @@ export default function Gallery() {
   return (
     <Gall>
       {images.map((image) => (
-        <Link href={image.urls.full} key={image.id}>
+        <Link href={image.urls.full} key={image.id} target="_blanck">
           <Image
             width={400}
             height={267}
