@@ -4,6 +4,7 @@ import Image from "next/image";
 import { imageprops } from './../../types/imag';
 
 import { Gall } from "./styles";
+import Link from "next/link";
 
 export default function Gallery() {
   const [images, setImages] = useState<imageprops[]>([]);
@@ -27,13 +28,15 @@ export default function Gallery() {
   return (
     <Gall>
       {images.map((image) => (
-        <Image
-          width={400}
-          height={267}
-          key={image.id}
-          src={image.urls.small}
-          alt={image.alt_description}
-        />
+        <Link href={}>
+          <Image
+            width={400}
+            height={267}
+            key={image.id}
+            src={image.urls.small}
+            alt={image.alt_description}
+          />
+        </Link>
       ))}
 
     </Gall>
