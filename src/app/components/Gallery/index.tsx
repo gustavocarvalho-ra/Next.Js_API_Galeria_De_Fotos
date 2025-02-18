@@ -12,7 +12,7 @@ export default function Gallery() {
 
   useEffect(() => {
     async function fetchImages() {
-      const response = await fetch("/api/unsplash?query=technology");
+      const response = await fetch("/api/unsplash?query=random");
       const data = await response.json();
       setImages(data);
       setLoading(false);
