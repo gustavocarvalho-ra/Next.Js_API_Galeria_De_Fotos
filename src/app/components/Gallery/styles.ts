@@ -16,5 +16,14 @@ export const Gall = styled.div `
     grid-gap: 1.4em;
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
+
+    .image {
+      display: flex;
+
+      a {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 `
