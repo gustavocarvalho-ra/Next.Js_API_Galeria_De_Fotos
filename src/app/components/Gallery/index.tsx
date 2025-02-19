@@ -27,17 +27,21 @@ export default function Gallery() {
 
   return (
     <Gall>
-      {images.map((image) => (
-        <Link href={image.urls.full} key={image.id} target="_blanck">
-          <Image
-            width={400}
-            height={267}
-            key={image.id}
-            src={image.urls.small}
-            alt={image.alt_description}
-          />
-        </Link>
-      ))}
+      <div className="windowGallery">
+        {images.map((image) => (
+          <div className="image" key={image.id}>
+            <Link href={image.urls.full} key={image.id} target="_blanck">
+              <Image
+                width={400}
+                height={267}
+                key={image.id}
+                src={image.urls.small}
+                alt={image.alt_description}
+              />
+            </Link>
+          </div>
+        ))}
+      </div>
 
     </Gall>
   )
