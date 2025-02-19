@@ -10,4 +10,11 @@ export const Gall = styled.div `
   justify-content: center;
   margin: 5em 5em 4em 5em;
   gap: 1.8em;
+
+  .windowGallery {
+    display: grid;
+    grid-gap: 1.4em;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
 `
