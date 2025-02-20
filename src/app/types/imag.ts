@@ -1,12 +1,16 @@
-export interface imageprops{
-    id: string;
-    alt_description: string;
-    urls: {
-      full: string,
-      raw: string,
-      regular: string,
-      small: string,
-      small_s3: string,
-      thumb: string
-    };
-  }
+export interface imageprops {
+  id: string;
+  alt_description: string;
+  urls: {
+    full: string,
+    raw: string,
+    regular: string,
+    small: string,
+    small_s3: string,
+    thumb: string
+  };
+}
+
+export interface ImageDivProps {
+  imageUrl: string;
+}
