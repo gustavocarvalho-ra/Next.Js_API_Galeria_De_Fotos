@@ -20,6 +20,10 @@ export const Gall = styled.div `
     .image {
       display: flex;
 
+      .grid {
+        display: grid;
+      }
+
       a {
         width: 100%;
         height: 100%;
