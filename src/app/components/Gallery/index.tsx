@@ -3,13 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-import { imageprops } from "./../../types/imag";
+import { imageprops, ImageDivProps } from "./../../types/imag";
 
 import { Gall } from "./styles";
-
-interface ImageDivProps {
-  imageUrl: string;
-}
 
 const ImageDiv: React.FC<ImageDivProps> = ({ imageUrl }) => {
   const [dimensions, setDimensions] = useState<{ width: number; height: number } | null>(null);
@@ -20,7 +16,6 @@ const ImageDiv: React.FC<ImageDivProps> = ({ imageUrl }) => {
     img.onload = () => setDimensions({ width: img.width, height: img.height });
   }, [imageUrl]);
 
-  // Enquanto a imagem não carrega, renderiza um placeholder
   if (!dimensions) {
     return <div>Carregando...</div>;
   }
