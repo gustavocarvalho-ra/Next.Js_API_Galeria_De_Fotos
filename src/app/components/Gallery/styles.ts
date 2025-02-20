@@ -23,6 +23,13 @@ export const Gall = styled.div `
       a {
         width: 100%;
         height: 100%;
+
+
+        .img {
+          background-image: url();
+          background-size: contain; 
+          background-repeat: no-repeat;
+        }
       }
     }
   }

@@ -31,7 +31,7 @@ export default function Gallery() {
         {images.map((image) => (
           <div className="image" key={image.id}>
             <Link href={image.urls.full} key={image.id} target="_blanck">
-              <div className="img">
+              <div className="img" key={image.id} style= {{ backgroundImage: `url(${image.urls.small})` }}>
                 
               </div>
               {/* <Image
