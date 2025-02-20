@@ -1,10 +1,42 @@
-"use client"
-import { useState, useEffect} from "react";
-// import Image from "next/image";
-import { imageprops } from './../../types/imag';
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+
+import { imageprops } from "./../../types/imag";
 
 import { Gall } from "./styles";
-import Link from "next/link";
+
+interface ImageDivProps {
+  imageUrl: string;
+}
+
+const ImageDiv: React.FC<ImageDivProps> = ({ imageUrl }) => {
+  const [dimensions, setDimensions] = useState<{ width: number; height: number } | null>(null);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = imageUrl;
+    img.onload = () => setDimensions({ width: img.width, height: img.height });
+  }, [imageUrl]);
+
+  // Enquanto a imagem não carrega, renderiza um placeholder
+  if (!dimensions) {
+    return <div>Carregando...</div>;
+  }
+
+  return (
+    <div
+      style={{
+        backgroundImage: `url(${imageUrl})`,
+        width: dimensions.width,
+        height: dimensions.height,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    />
+  );
+};
 
 export default function Gallery() {
   const [images, setImages] = useState<imageprops[]>([]);
@@ -16,10 +48,8 @@ export default function Gallery() {
       const data = await response.json();
       setImages(data);
       setLoading(false);
-
-      console.log(data)
+      console.log(data);
     }
-
     fetchImages();
   }, []);
 
@@ -30,22 +60,12 @@ export default function Gallery() {
       <div className="windowGallery">
         {images.map((image) => (
           <div className="image" key={image.id}>
-            <Link href={image.urls.full} key={image.id} target="_blanck">
-              <div className="img" key={image.id} style= {{ backgroundImage: `url(${image.urls.small})` }}>
-                
-              </div>
-              {/* <Image
-                width={400}
-                height={267}
-                key={image.id}
-                src={image.urls.small}
-                alt={image.alt_description}
-              /> */}
+            <Link href={image.urls.full} target="_blank">
+              <ImageDiv imageUrl={image.urls.small} />
             </Link>
           </div>
         ))}
       </div>
-
     </Gall>
-  )
+  );
 }
