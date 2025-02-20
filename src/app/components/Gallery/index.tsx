@@ -55,9 +55,21 @@ export default function Gallery() {
       <div className="windowGallery">
         {images.map((image) => (
           <div className="image" key={image.id}>
-            <Link href={image.urls.full} target="_blank">
-              <ImageDiv imageUrl={image.urls.small} />
-            </Link>
+            <div className="grid">
+              <Link href={image.urls.full} target="_blank">
+                <ImageDiv imageUrl={image.urls.small} />
+              </Link>
+            </div>
+            <div className="grid">
+              <Link href={image.urls.full} target="_blank">
+                <ImageDiv imageUrl={image.urls.small} />
+              </Link>
+            </div>
+            <div className="grid">
+              <Link href={image.urls.full} target="_blank">
+                <ImageDiv imageUrl={image.urls.small} />
+              </Link>
+            </div>
           </div>
         ))}
       </div>
