@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { imageprops } from '../types/imag';
+import { useState, useEffect } from "react";
+import { imageprops } from "../types/imag";
 
 export function useImages(query: string = "random") {
   const [images, setImages] = useState<imageprops[]>([]);
@@ -15,6 +15,7 @@ export function useImages(query: string = "random") {
         }
         const data = await response.json();
         setImages(data);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
         setError(err.message);
       } finally {
@@ -24,5 +25,5 @@ export function useImages(query: string = "random") {
     fetchImages();
   }, [query]);
 
-  return{ images, loading, error};
+  return { images, loading, error };
 }
