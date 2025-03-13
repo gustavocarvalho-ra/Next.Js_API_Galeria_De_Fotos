@@ -14,13 +14,34 @@ export default function Gallery() {
   return (
     <Gall>
       <div className="windowGallery">
-        {images.map((image) => (
-          <div className="image" key={image.id}>
-            <Link href={image.urls.full} target="_blank">
-              <ImageDiv imageUrl={image.urls.small} />
-            </Link>
-          </div>
-        ))}
+        <div className="cln1">
+          {images.map((image) => (
+            <div className="image" key={image.id}>
+              <Link href={image.urls.full} target="_blank">
+                <ImageDiv imageUrl={image.urls.small} />
+              </Link>
+            </div>
+          ))}
+        </div>
+        <div className="cln2">
+          {images.map((image) => (
+            <div className="image" key={image.id}>
+              <Link href={image.urls.full} target="_blank">
+                <ImageDiv imageUrl={image.urls.small} />
+              </Link>
+            </div>
+          ))}
+        </div>
+        <div className="cln3">
+          {images.map((image) => (
+            <div className="image" key={image.id}>
+              <Link href={image.urls.full} target="_blank">
+                <ImageDiv imageUrl={image.urls.small} />
+              </Link>
+            </div>
+          ))}
+        </div>
+        
       </div>
     </Gall>
   );
