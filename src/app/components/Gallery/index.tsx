@@ -11,11 +11,15 @@ export default function Gallery() {
   if (loading) return <p>Carregando...</p>;
   if (error) return <p>{error}</p>;
 
+  const first = images.filter((_, index) => index % 3 === 0);
+  const second = images.filter((_, index) => index % 3 === 1);
+  const third = images.filter((_, index) => index % 3 === 2);
+
   return (
     <Gall>
       <div className="windowGallery">
-        <div className="cln1">
-          {images.map((image) => (
+        <div className="cln">
+          {first.map((image) => (
             <div className="image" key={image.id}>
               <Link href={image.urls.full} target="_blank">
                 <ImageDiv imageUrl={image.urls.small} />
@@ -23,8 +27,8 @@ export default function Gallery() {
             </div>
           ))}
         </div>
-        <div className="cln2">
-          {images.map((image) => (
+        <div className="cln">
+          {second.map((image) => (
             <div className="image" key={image.id}>
               <Link href={image.urls.full} target="_blank">
                 <ImageDiv imageUrl={image.urls.small} />
@@ -32,8 +36,8 @@ export default function Gallery() {
             </div>
           ))}
         </div>
-        <div className="cln3">
-          {images.map((image) => (
+        <div className="cln">
+          {third.map((image) => (
             <div className="image" key={image.id}>
               <Link href={image.urls.full} target="_blank">
                 <ImageDiv imageUrl={image.urls.small} />
