@@ -7,10 +7,12 @@ export const Head = styled.div `
   display: flex;
   align-items: center;
 
-  h2 {
+  a {
     color: var(--background);
     color: grey;
     font-weight: 900;
     padding: .5em 1em;
+    text-decoration: none;
+    font-size: 1.5em;
   }
 `
