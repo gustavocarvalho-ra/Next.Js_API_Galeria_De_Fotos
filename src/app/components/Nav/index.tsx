@@ -4,7 +4,7 @@ import { NavBar } from "./styles";
 export default function Nav() {
   return (
     <NavBar>
-      <Link href={"/"}>test nav</Link>
+      <Link href={"../../wallpapers"}>wallpaper</Link>
 
     </NavBar>
   )
