@@ -1,10 +1,10 @@
 "use client";
 
-export default function wall() {
-  return (
-    <h1>test</h1>
-  )
-}
+// export default function wall() {
+//   return (
+//     <h1>test</h1>
+//   )
+// }
 
 // import Link from "next/link";
 // import { Gall } from "../styles";
