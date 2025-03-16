@@ -6,6 +6,7 @@ export const Head = styled.div `
   background-color: var(--second-background);
   display: flex;
   align-items: center;
+  flex-direction: column;
 
   a {
     color: var(--background);
@@ -14,5 +15,9 @@ export const Head = styled.div `
     padding: .5em 1em;
     text-decoration: none;
     font-size: 1.5em;
+  }
+
+  .hr {
+    width: 100%;
   }
 `
