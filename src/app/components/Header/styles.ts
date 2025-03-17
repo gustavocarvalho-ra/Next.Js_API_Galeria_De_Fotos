@@ -8,14 +8,24 @@ export const Head = styled.div `
   align-items: center;
   flex-direction: column;
 
-  a {
-    color: var(--background);
-    color: grey;
-    font-weight: 900;
-    padding: .5em 1em;
-    text-decoration: none;
-    font-size: 1.5em;
+  .cont {
+    width: 100%;
+    
+    a {
+      width: 30%;
+      color: var(--background);
+      color: grey;
+      font-weight: 900;
+      padding: .5em 1em;
+      text-decoration: none;
+      font-size: 1.5em;
+    }
+
+    .space {
+      width: 70%;
+    }
   }
+
 
   .hr {
     width: 100%;
