@@ -10,7 +10,9 @@ export const Head = styled.div `
 
   .cont {
     width: 100%;
-    
+    display: flex;
+    align-items: center;
+
     a {
       width: 30%;
       color: var(--background);
