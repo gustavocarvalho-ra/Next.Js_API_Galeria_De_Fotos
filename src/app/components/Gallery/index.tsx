@@ -6,7 +6,7 @@ import { useImages } from './../../hooks/useImages';
 import { ImageDiv } from './../ImageDiv/index';
 
 export default function Gallery() {
-  const { images, loading, error } = useImages("random");
+  const { images = [], loading, error } = useImages("imageType");
 
   if (loading) return <p>Carregando...</p>;
   if (error) return <p>{error}</p>;

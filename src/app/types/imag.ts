@@ -13,4 +13,5 @@ export interface imageprops {
 
 export interface ImageDivProps {
   imageUrl: string;
+  loading?: "lazy" | "eager";
 }
