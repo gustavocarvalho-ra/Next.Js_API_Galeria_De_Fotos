@@ -11,7 +11,6 @@ const NUM_COLUMNS = 3;
 export default function Gallery({ imageType = "wallpaper" }) {
   const { images = [], loading, error } = useImages(imageType);
 
-  // ✅ useMemo é sempre chamado, independente de loading ou error
   const columns = useMemo(() => {
     const cols: typeof images[] = Array.from({ length: NUM_COLUMNS }, () => []);
     images.forEach((image, index) => {
