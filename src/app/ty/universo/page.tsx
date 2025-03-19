@@ -2,6 +2,6 @@
 
 import { Gallery } from './../../components/Gallery/index';
 
-export default function WallpapersPage() {
-  return <Gallery imageType="uni" />;
+export default function UniversePage() {
+  return <Gallery imageType="universe" />;
 }
