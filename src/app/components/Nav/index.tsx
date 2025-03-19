@@ -5,6 +5,11 @@ export default function Nav() {
   return (
     <NavBar>
       <Link href={"../../ty/wallpapers"}>wallpaper</Link>
+      <Link href={"../../ty/textura"}>wallpaper</Link>
+      <Link href={"../../ty/universo"}>universo</Link>
+      <Link href={"../../ty/carros"}>wallpaper</Link>
+      <Link href={"../../ty/wallpapers"}>wallpaper</Link>
+      <Link href={"../../ty/wallpapers"}>wallpaper</Link>
 
     </NavBar>
   )
