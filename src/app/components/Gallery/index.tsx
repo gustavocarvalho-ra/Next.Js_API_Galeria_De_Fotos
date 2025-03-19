@@ -6,6 +6,7 @@ import { useImages } from "../../hooks/useImages";
 import { ImageDiv } from "../../components/ImageDiv";
 import { useMemo } from "react";
 import Header from "../Header";
+import Nav from "../Nav";
 
 const NUM_COLUMNS = 3;
 
@@ -30,6 +31,8 @@ export function Gallery({ imageType }: GalleryProps) {
   return (
     <>
       <Header />
+      <Nav />
+      
       <Gall>
         <div className="windowGallery">
           {columns.map((col, colIndex) => (
