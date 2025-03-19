@@ -11,6 +11,6 @@ export const NavBar = styled.div `
   a {
     text-decoration: none;
     font-weight: 700;
-    color: #4F4F4F;
+    color: #696969;
   }
 `
