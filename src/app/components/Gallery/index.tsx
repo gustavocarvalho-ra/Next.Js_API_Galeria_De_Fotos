@@ -5,6 +5,7 @@ import { Gall } from "./styles";
 import { useImages } from "../../hooks/useImages";
 import { ImageDiv } from "../../components/ImageDiv";
 import { useMemo } from "react";
+import Header from "../Header";
 
 const NUM_COLUMNS = 3;
 
@@ -27,20 +28,23 @@ export function Gallery({ imageType }: GalleryProps) {
   if (error) return <p>{error}</p>;
 
   return (
-    <Gall>
-      <div className="windowGallery">
-        {columns.map((col, colIndex) => (
-          <div className="cln" key={colIndex}>
-            {col.map((image) => (
-              <div className="image" key={image.id}>
-                <Link href={image.urls.full} target="_blank">
-                  <ImageDiv imageUrl={image.urls.small} />
-                </Link>
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-    </Gall>
+    <>
+      <Header />
+      <Gall>
+        <div className="windowGallery">
+          {columns.map((col, colIndex) => (
+            <div className="cln" key={colIndex}>
+              {col.map((image) => (
+                <div className="image" key={image.id}>
+                  <Link href={image.urls.full} target="_blank">
+                    <ImageDiv imageUrl={image.urls.small} />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </Gall>
+    </>
   );
 }
