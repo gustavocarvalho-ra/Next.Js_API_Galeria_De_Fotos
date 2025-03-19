@@ -6,11 +6,13 @@ export const NavBar = styled.div `
   background-color: var(--second-background);
   display: flex;
   align-items: center;
+  padding-left: 1em;
   gap: 1em;
 
   a {
     text-decoration: none;
-    font-weight: 700;
-    color: #696969;
+    font-weight: 800;
+    font-size: .83em;
+    color: var(--text-grey-sec);
   }
 `
