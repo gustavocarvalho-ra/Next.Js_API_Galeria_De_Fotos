@@ -7,7 +7,7 @@ export default function Nav() {
       <Link href={"../../ty/wallpapers"}>wallpaper</Link>
       <Link href={"../../ty/textura"}>textura</Link>
       <Link href={"../../ty/universo"}>universo</Link>
-      <Link href={"../../ty/carros"}>wallpaper</Link>
+      <Link href={"../../ty/carro"}>carro</Link>
       <Link href={"../../ty/wallpapers"}>wallpaper</Link>
       <Link href={"../../ty/wallpapers"}>wallpaper</Link>
       
