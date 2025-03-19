@@ -6,4 +6,11 @@ export const NavBar = styled.div `
   background-color: var(--second-background);
   display: flex;
   align-items: center;
+  gap: 1em;
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #4F4F4F;
+  }
 `
