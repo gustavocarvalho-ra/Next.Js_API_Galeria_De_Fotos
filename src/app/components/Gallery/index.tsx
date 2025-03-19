@@ -2,50 +2,44 @@
 
 import Link from "next/link";
 import { Gall } from "./styles";
-import { useImages } from './../../hooks/useImages';
-import { ImageDiv } from './../ImageDiv/index';
+import { useImages } from "../../hooks/useImages";
+import { ImageDiv } from "../../components/ImageDiv";
+import { useMemo } from "react";
 
-export default function Gallery() {
-  const { images = [], loading, error } = useImages("random");
+const NUM_COLUMNS = 3;
+
+interface GalleryProps {
+  imageType: string;
+}
+
+export function Gallery({ imageType }: GalleryProps) {
+  const { images = [], loading, error } = useImages(imageType);
+
+  const columns = useMemo(() => {
+    const cols: typeof images[] = Array.from({ length: NUM_COLUMNS }, () => []);
+    images.forEach((image, index) => {
+      cols[index % NUM_COLUMNS].push(image);
+    });
+    return cols;
+  }, [images]);
 
   if (loading) return <p>Carregando...</p>;
   if (error) return <p>{error}</p>;
 
-  const first = images.filter((_, index) => index % 3 === 0);
-  const second = images.filter((_, index) => index % 3 === 1);
-  const third = images.filter((_, index) => index % 3 === 2);
-
   return (
     <Gall>
       <div className="windowGallery">
-        <div className="cln">
-          {first.map((image) => (
-            <div className="image" key={image.id}>
-              <Link href={image.urls.full} target="_blank">
-                <ImageDiv imageUrl={image.urls.small} />
-              </Link>
-            </div>
-          ))}
-        </div>
-        <div className="cln">
-          {second.map((image) => (
-            <div className="image" key={image.id}>
-              <Link href={image.urls.full} target="_blank">
-                <ImageDiv imageUrl={image.urls.small} />
-              </Link>
-            </div>
-          ))}
-        </div>
-        <div className="cln">
-          {third.map((image) => (
-            <div className="image" key={image.id}>
-              <Link href={image.urls.full} target="_blank">
-                <ImageDiv imageUrl={image.urls.small} />
-              </Link>
-            </div>
-          ))}
-        </div>
-        
+        {columns.map((col, colIndex) => (
+          <div className="cln" key={colIndex}>
+            {col.map((image) => (
+              <div className="image" key={image.id}>
+                <Link href={image.urls.full} target="_blank">
+                  <ImageDiv imageUrl={image.urls.small} />
+                </Link>
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
     </Gall>
   );

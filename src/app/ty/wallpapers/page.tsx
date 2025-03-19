@@ -8,7 +8,7 @@ import { useMemo } from "react";
 
 const NUM_COLUMNS = 3;
 
-export default function Gallery({ imageType = "wallpaper" }) {
+export default function Galleryy({ imageType = "wallpaper" }) {
   const { images = [], loading, error } = useImages(imageType);
 
   const columns = useMemo(() => {
