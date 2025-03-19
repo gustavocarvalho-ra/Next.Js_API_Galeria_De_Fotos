@@ -6,7 +6,7 @@ export default function Header() {
     <Head>
       <div className="cont">
         <Link href={"/"}>Galeria Online</Link>
-        <div className="space"></div>
+        {/* <div className="space"></div> */}
         
       </div>
       <hr className="hr"/>

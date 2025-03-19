@@ -14,7 +14,7 @@ export const Head = styled.div `
     align-items: center;
 
     a {
-      width: 15%;
+      width: 100%;
       color: var(--background);
       color: grey;
       font-weight: 900;
