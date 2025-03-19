@@ -14,6 +14,7 @@ export function useImages(query: string = "random") {
           throw new Error("Erro ao buscar imagens");
         }
         const data = await response.json();
+        console.log(data)
         setImages(data);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
