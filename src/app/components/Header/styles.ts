@@ -14,7 +14,7 @@ export const Head = styled.div `
     align-items: center;
 
     a {
-      width: 30%;
+      width: 15%;
       color: var(--background);
       color: grey;
       font-weight: 900;
@@ -24,7 +24,7 @@ export const Head = styled.div `
     }
 
     .space {
-      width: 70%;
+      width: 85%;
     }
   }
 
