@@ -14,5 +14,12 @@ export const NavBar = styled.div `
     font-weight: 800;
     font-size: .83em;
     color: var(--text-grey-sec);
+    letter-spacing: 1px;
+
+    &:hover {
+      color: #C0C0C0;
+    }
+
+    
   }
 `
