@@ -7,7 +7,7 @@ export const NavBar = styled.div `
   display: flex;
   align-items: center;
   padding-left: 1em;
-  gap: 1em;
+  gap: 2em;
 
   a {
     height: 100%;
