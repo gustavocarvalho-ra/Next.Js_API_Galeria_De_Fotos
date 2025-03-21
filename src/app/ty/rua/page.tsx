@@ -2,6 +2,6 @@
 
 import { Gallery } from './../../components/Gallery/index';
 
-export default function MotorcyclePage() {
-  return <Gallery imageType="motorcycle" />;
+export default function StreetPage() {
+  return <Gallery imageType="street" />;
 }

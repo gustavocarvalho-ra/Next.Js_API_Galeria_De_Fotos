@@ -10,6 +10,9 @@ export default function Nav() {
       <Link href={"../../ty/natureza"}>Natureza</Link>
       <Link href={"../../ty/carro"}>Carro</Link>
       <Link href={"../../ty/moto"}>Moto</Link>
+      <Link href={"../../ty/animais"}>Animais</Link>
+      <Link href={"../../ty/moto"}>Moto</Link>
+      <Link href={"../../ty/moto"}>Moto</Link>
       
 
     </NavBar>
