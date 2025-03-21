@@ -4,6 +4,7 @@ import { NavBar } from "./styles";
 export default function Nav() {
   return (
     <NavBar>
+      <Link href={"../../ty/foto"}>Foto</Link>
       <Link href={"../../ty/wallpapers"}>Wallpaper</Link>
       <Link href={"../../ty/textura"}>Textura</Link>
       <Link href={"../../ty/universo"}>Universo</Link>
