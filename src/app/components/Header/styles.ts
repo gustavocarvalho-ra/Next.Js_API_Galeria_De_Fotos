@@ -14,7 +14,7 @@ export const Head = styled.div `
     align-items: center;
 
     a {
-      width: 100%;
+      width: 20%;
       color: var(--background);
       color: grey;
       font-weight: 900;
@@ -23,8 +23,18 @@ export const Head = styled.div `
       font-size: 1.5em;
     }
 
-    .space {
-      width: 85%;
+    .search {
+      width: 80%;
+      height: 100%;
+      align-content: center;
+
+      input {
+        width: 50%;
+        height: 60%;
+        border: none;
+        background: var(--background);
+        border-radius: 8px;
+      }
     }
   }
 
