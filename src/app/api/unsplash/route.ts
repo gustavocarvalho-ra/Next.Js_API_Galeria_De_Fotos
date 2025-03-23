@@ -8,7 +8,7 @@ export async function GET(req: Request) {
   try {
     const result = await unsplash.search.getPhotos({
       query,
-      perPage: 20,
+      perPage: 30,
     });
 
     if (result.errors) {
