@@ -15,7 +15,7 @@ export default function Nav() {
       <Link href={"../../ty/rua"}>Rua</Link>
       <Link href={"../../ty/viagem"}>Viagem</Link>
       <Link href={"../../ty/flor"}>Flor</Link>
-      <Link href={"../../ty/viagem"}>Viagem</Link>
+      <Link href={"../../ty/moda"}>Moda</Link>
       
 
     </NavBar>
