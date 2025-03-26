@@ -30,9 +30,12 @@ export const Head = styled.div `
 
       input {
         width: 50%;
-        height: 60%;
+        height: 55%;
+        /* background: var(--background); */
+        background: #535353;
+        color: var(--text-grey-ter);
+        padding-left: 1em;
         border: none;
-        background: var(--background);
         border-radius: 8px;
       }
     }
