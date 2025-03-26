@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Head } from "./styles";
+import { AiOutlineSearch } from "react-icons/ai";
 
 export default function Header() {
   return (
@@ -8,6 +9,7 @@ export default function Header() {
         <Link href={"/"}>Galeria Online</Link>
         <div className="search">
           <input type="text" />
+          <AiOutlineSearch className="lup" />
         </div>
         
       </div>
