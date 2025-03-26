@@ -26,7 +26,8 @@ export const Head = styled.div `
     .search {
       width: 80%;
       height: 100%;
-      align-content: center;
+      display: flex;
+      align-items: center;
 
       input {
         width: 50%;
@@ -38,10 +39,13 @@ export const Head = styled.div `
         border-radius: 8px;
       }
 
-      svg {
-        position: relative;
-        font-size: 1.5em;
-        color: var(--text-grey-sec);
+      .lup {
+        display: flex;
+        svg {
+          position: relative;
+          font-size: 1.5em;
+          color: var(--text-grey-sec);
+        }
       }
     }
   }
