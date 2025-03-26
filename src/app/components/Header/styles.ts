@@ -31,8 +31,7 @@ export const Head = styled.div `
       input {
         width: 50%;
         height: 55%;
-        /* background: var(--background); */
-        background: #535353;
+        background: var(--text-grey-qua);
         color: var(--text-grey-ter);
         padding-left: 1em;
         border: none;
