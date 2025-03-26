@@ -37,6 +37,12 @@ export const Head = styled.div `
         border: none;
         border-radius: 8px;
       }
+
+      svg {
+        position: relative;
+        font-size: 1.5em;
+        color: var(--text-grey-sec);
+      }
     }
   }
 
