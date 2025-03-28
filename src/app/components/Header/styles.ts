@@ -53,6 +53,7 @@ export const Head = styled.div `
           background: transparent;
           border: none;
           font-size: 1em;
+          cursor: pointer;
 
           svg {
             position: relative;
