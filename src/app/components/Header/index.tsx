@@ -8,10 +8,12 @@ export default function Header() {
       <div className="cont">
         <Link href={"/"}>Galeria Online</Link>
         <div className="search">
-          <input type="text" />
-          <div className="lup">
-            <AiOutlineSearch />
-          </div>
+          <form action="">
+            <button className="lup">
+              <AiOutlineSearch />
+            </button>
+            <input type="string" />
+          </form>
         </div>
         
       </div>
