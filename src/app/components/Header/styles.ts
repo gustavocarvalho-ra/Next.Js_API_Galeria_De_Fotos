@@ -43,8 +43,11 @@ export const Head = styled.div `
         input {
           width: 90%;
           height: 100%;
+          color: var(--text-grey-ter);
           background: var(--text-grey-qua);
           border: none;
+          outline: 0;
+          font-size: 1em;
         }
   
         .lup {
