@@ -49,10 +49,15 @@ export const Head = styled.div `
   
         .lup {
           display: flex;
+          align-items: center;
+          background: transparent;
+          border: none;
+          font-size: 1em;
+
           svg {
             position: relative;
             font-size: 1.5em;
-            color: var(--text-grey-sec);
+            color: #fff;
           }
         }
       }
