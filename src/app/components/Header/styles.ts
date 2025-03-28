@@ -29,22 +29,31 @@ export const Head = styled.div `
       display: flex;
       align-items: center;
 
-      input {
+      form {
         width: 50%;
         height: 55%;
+        display: flex;
         background: var(--text-grey-qua);
         color: var(--text-grey-ter);
         padding-left: 1em;
         border: none;
         border-radius: 8px;
-      }
 
-      .lup {
-        display: flex;
-        svg {
-          position: relative;
-          font-size: 1.5em;
-          color: var(--text-grey-sec);
+
+        input {
+          width: 90%;
+          height: 100%;
+          background: var(--text-grey-qua);
+          border: none;
+        }
+  
+        .lup {
+          display: flex;
+          svg {
+            position: relative;
+            font-size: 1.5em;
+            color: var(--text-grey-sec);
+          }
         }
       }
     }
