@@ -35,10 +35,8 @@ export const Head = styled.div `
         display: flex;
         background: var(--text-grey-qua);
         color: var(--text-grey-ter);
-        padding-left: 1em;
         border: none;
         border-radius: 8px;
-
 
         input {
           width: 90%;
@@ -57,6 +55,7 @@ export const Head = styled.div `
           border: none;
           font-size: 1em;
           cursor: pointer;
+          padding: 0 .6em 0 .6em;
 
           svg {
             position: relative;
