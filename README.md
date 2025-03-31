@@ -4,3 +4,12 @@
 
 ### - v1
 - Realizar a integração com a API 💹
+
+
+
+
+
+
+### - v3 
+
+- Adicionar perfil de usuário 
