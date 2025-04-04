@@ -6,6 +6,7 @@ export const Foot = styled.div `
   background-color: var(--second-background);
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   color: var(--text-grey-ter);
 
   h3 {
@@ -18,7 +19,12 @@ export const Foot = styled.div `
 
   .icons {
     display: flex;
+    
     a {
+      display: flex;
+      align-items: center;
+      font-size: 1.5em;
+      margin: 0 .5em 0 .5em;
       color: var(--text-grey-ter);
     }
   }
