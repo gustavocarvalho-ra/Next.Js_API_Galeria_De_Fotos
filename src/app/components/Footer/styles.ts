@@ -6,10 +6,14 @@ export const Foot = styled.div `
   background-color: var(--second-background);
   display: flex;
   align-items: center;
+  color: var(--text-grey-ter);
+
+  h3 {
+    font-size: .8em;
+  }
 
   h2 {
-    font-size: 1em;
-    color: var(--text-grey-ter);
+    font-size: .8em;
   }
 
   .icons {

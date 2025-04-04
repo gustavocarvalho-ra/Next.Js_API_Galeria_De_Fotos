@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 export default function Footer() {
   return (
     <Foot>
-      <h2>Obrigado pela visita!</h2>
+      <h3>Gustavo Carvalho Raimundo</h3>
       <div className="icons">
         <Link href="https://github.com/gustavocarvalho-ra" target="_blank">
           <FaGithub />
@@ -16,6 +16,7 @@ export default function Footer() {
           <FaLinkedin />
         </Link>
       </div>
+      <h2>Obrigado pela visita!</h2>
     </Foot>
   )
 }
