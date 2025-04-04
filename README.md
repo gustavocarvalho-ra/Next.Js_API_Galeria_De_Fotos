@@ -5,6 +5,9 @@
 ### - v1
 - Realizar a integração com a API 💹
 
-
 ### - v2
 - Adicionar a funcionalidade de busca por imagens
+
+### - v3 
+
+- Adicionar perfil de usuário 
