@@ -11,6 +11,7 @@ export const Foot = styled.div `
 
   h3 {
     font-size: .8em;
+    cursor: default;
   }
 
   h2 {
