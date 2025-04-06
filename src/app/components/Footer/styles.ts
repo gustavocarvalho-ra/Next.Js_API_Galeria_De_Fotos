@@ -20,13 +20,18 @@ export const Foot = styled.div `
 
   .icons {
     display: flex;
+    gap: 1em;
     
     a {
       display: flex;
       align-items: center;
       font-size: 1.5em;
-      margin: 0 .5em 0 .5em;
       color: var(--text-grey-ter);
+      transition: all .3s;
+
+      &:hover {
+        color: var(--text-grey-qua);
+      }
     }
   }
 `
