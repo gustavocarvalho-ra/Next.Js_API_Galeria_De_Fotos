@@ -8,10 +8,10 @@ export const Foot = styled.div `
   align-items: center;
   justify-content: space-evenly;
   color: var(--text-grey-ter);
+  cursor: default;
 
   h3 {
     font-size: .8em;
-    cursor: default;
   }
 
   h2 {
