@@ -21,6 +21,11 @@ export const Head = styled.div `
       padding: .5em 1em;
       text-decoration: none;
       font-size: 1.5em;
+      transition: all .3s;
+
+      &:hover {
+        color: var(--text-grey-qua);
+      }
     }
 
     .search {
