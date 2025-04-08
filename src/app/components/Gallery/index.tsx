@@ -7,6 +7,7 @@ import { ImageDiv } from "../../components/ImageDiv";
 import { useMemo } from "react";
 import Header from "../Header";
 import Nav from "../Nav";
+import Footer from "../Footer";
 
 const NUM_COLUMNS = 3;
 
@@ -48,6 +49,7 @@ export function Gallery({ imageType }: GalleryProps) {
           ))}
         </div>
       </Gall>
+      <Footer />
     </>
   );
 }
