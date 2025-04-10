@@ -21,7 +21,8 @@ async function ImageResults({ query }: { query: string }) {
   return (
     <div className="grid grid-cols-3 gap-4 mt-4">
       {images.map((img: imageprops) => (
-        <Image key={img.id} src={img.urls.small} alt={img.alt_description || "Image"} className="rounded" />
+        // eslint-disable-next-line @next/next/no-img-element
+        <img key={img.id} src={img.urls.small} alt={img.alt_description || "Image"} className="rounded" />
       ))}
     </div>
   );
