@@ -13,7 +13,7 @@ export default function Header() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (!searchTerm.trim()) return;
-    router.push(`/search?query=${searchTerm}`);
+    router.push(`/ty/search?query=${searchTerm}`);
   };
 
   return (
