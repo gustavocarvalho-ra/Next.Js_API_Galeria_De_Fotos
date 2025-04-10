@@ -15,7 +15,7 @@ export default function SearchPage({ searchParams }: { searchParams: { query?: s
 }
 
 async function ImageResults({ query }: { query: string }) {
-  const res = await fetch(`/api/photos?query=${query}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/photos?query=${query}`);
   const images = await res.json();
 
   return (
