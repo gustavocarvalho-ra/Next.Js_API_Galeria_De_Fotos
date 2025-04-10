@@ -9,7 +9,7 @@ export function useImages(query: string = "random") {
   useEffect(() => {
     async function fetchImages() {
       try {
-        const response = await fetch(`/api/unsplash?query=${query}`);
+        const response = await fetch(`/api/photos?query=${query}`);
         if (!response.ok) {
           throw new Error("Erro ao buscar imagens");
         }

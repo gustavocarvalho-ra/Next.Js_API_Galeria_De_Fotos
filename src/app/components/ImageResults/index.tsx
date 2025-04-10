@@ -13,12 +13,21 @@ export default function ImageResults({ query }: Props) {
 
   useEffect(() => {
     const fetchImages = async () => {
-      const res = await fetch(`/api/photos?query=${query}`);
-      const data = await res.json();
-      setImages(data);
-      setLoading(false);
+      try {
+        const res = await fetch(`/api/photos?query=${query}`);
+        if (!res.ok) {
+          throw new Error(`Erro HTTP: ${res.status}`);
+        }
+  
+        const data = await res.json();
+        setImages(data);
+      } catch (err) {
+        console.error("Erro ao buscar imagens:", err);
+      } finally {
+        setLoading(false);
+      }
     };
-
+  
     fetchImages();
   }, [query]);
 

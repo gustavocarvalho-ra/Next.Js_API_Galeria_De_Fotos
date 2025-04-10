@@ -1,9 +1,11 @@
-// "use client"
+"use client";
 
+import { useSearchParams } from "next/navigation";
 import ImageResults from "@/app/components/ImageResults";
 
-export default async function SearchPage({ searchParams }: { searchParams: { query?: string } }) {
-  const query = searchParams.query || "nature";
+export default function SearchPage() {
+  const searchParams = useSearchParams();
+  const query = searchParams.get("query") || "nature";
 
   return (
     <div>
