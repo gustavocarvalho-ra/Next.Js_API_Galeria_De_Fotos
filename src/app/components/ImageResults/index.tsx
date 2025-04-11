@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { imageprops } from "@/app/types/imag";
+import { SearchSty } from "./styles";
 
 interface Props {
   query: string;
@@ -35,7 +36,7 @@ export default function ImageResults({ query }: Props) {
   if (loading) return <p>Carregando imagens...</p>;
 
   return (
-    <div className="grid grid-cols-3 gap-4 mt-4">
+    <SearchSty>
       {images.map((img) => (
         // eslint-disable-next-line @next/next/no-img-element
         <img
@@ -45,6 +46,6 @@ export default function ImageResults({ query }: Props) {
           className="rounded"
         />
       ))}
-    </div>
+    </SearchSty>
   );
 }
