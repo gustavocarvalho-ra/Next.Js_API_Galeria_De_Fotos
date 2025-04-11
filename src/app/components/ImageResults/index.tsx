@@ -21,6 +21,7 @@ export default function ImageResults({ query }: Props) {
   
         const data = await res.json();
         setImages(data);
+        console.log(data)
       } catch (err) {
         console.error("Erro ao buscar imagens:", err);
       } finally {
