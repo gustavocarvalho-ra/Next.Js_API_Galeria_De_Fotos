@@ -9,7 +9,7 @@ export default function SearchPage() {
 
   return (
     <div>
-      <h2>Resultados para &quot;{query}&quot;</h2>
+      <h2>Resultados para: &quot;{query}&quot;</h2>
       <ImageResults query={query} />
     </div>
   );
