@@ -9,6 +9,8 @@ export const Foot = styled.div `
   justify-content: space-evenly;
   color: var(--text-grey-ter);
   cursor: default;
+  position: sticky;
+  bottom: 0px;
 
   h3 {
     font-size: .8em;
