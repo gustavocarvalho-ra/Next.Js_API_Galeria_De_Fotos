@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { Gall } from "./styles";
-import { useImages } from "../../hooks/useImages";
 import { ImageDiv } from "../../components/ImageDiv";
 import { useMemo } from "react";
 import Header from "../Header";
 import Nav from "../Nav";
 import Footer from "../Footer";
+import { useImageSearch } from './../../hooks/useImages';
 
 const NUM_COLUMNS = 3;
 
@@ -16,7 +16,7 @@ interface GalleryProps {
 }
 
 export function Gallery({ imageType }: GalleryProps) {
-  const { images = [], loading, error } = useImages(imageType);
+  const { images = [], loading, error } = useImageSearch(imageType);
 
   const columns = useMemo(() => {
     const cols: typeof images[] = Array.from({ length: NUM_COLUMNS }, () => []);
