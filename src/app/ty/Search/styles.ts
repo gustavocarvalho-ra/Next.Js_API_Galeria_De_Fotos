@@ -8,7 +8,7 @@ export const Wind = styled.div `
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 5em 5em 4em 5em;
+  margin: 3em 5em 4em 5em;
   gap: 1.8em;
 
   .mainWin {
