@@ -3,7 +3,7 @@
 import { useMemo } from 'react';
 import { useImageSearch } from './../../hooks/useImages';
 import { SearchSty } from "./styles";
-import Image from "next/image";
+import { ImageDiv } from '../ImageDiv';
 
 interface Props {
   query: string;
@@ -30,13 +30,9 @@ export default function ImageResults({ query }: Props) {
       {columns.map((column, colIndex) => (
         <div key={colIndex} className="flex flex-col gap-4">
           {column.map((img) => (
-            <Image
+            <ImageDiv
               key={img.id}
-              src={img.urls.small}
-              alt={img.alt_description || "Imagem"}
-              width={300}
-              height={200}
-              className="rounded object-cover w-full"
+              imageUrl={img.urls.small}
             />
           ))}
         </div>
