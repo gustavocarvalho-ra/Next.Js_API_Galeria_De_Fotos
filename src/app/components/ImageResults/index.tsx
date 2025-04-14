@@ -1,50 +1,45 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { imageprops } from "@/app/types/imag";
+import { useMemo } from 'react';
+import { useImageSearch } from './../../hooks/useImages';
 import { SearchSty } from "./styles";
+import Image from "next/image";
 
 interface Props {
   query: string;
 }
 
-export default function ImageResults({ query }: Props) {
-  const [images, setImages] = useState<imageprops[]>([]);
-  const [loading, setLoading] = useState(true);
+const NUM_COLUMNS = 3;
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const res = await fetch(`/api/photos?query=${query}`);
-        if (!res.ok) {
-          throw new Error(`Erro HTTP: ${res.status}`);
-        }
-  
-        const data = await res.json();
-        setImages(data);
-        console.log(data)
-      } catch (err) {
-        console.error("Erro ao buscar imagens:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-  
-    fetchImages();
-  }, [query]);
+export default function ImageResults({ query }: Props) {
+  const { images, loading, error } = useImageSearch(query);
+
+  const columns = useMemo(() => {
+    const cols: typeof images[] = Array.from({ length: NUM_COLUMNS }, () => []);
+    images.forEach((image, index) => {
+      cols[index % NUM_COLUMNS].push(image);
+    });
+    return cols;
+  }, [images]);
 
   if (loading) return <p>Carregando imagens...</p>;
+  if (error) return <p>Erro ao carregar imagens.</p>;
 
   return (
-    <SearchSty>
-      {images.map((img) => (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          key={img.id}
-          src={img.urls.small}
-          alt={img.alt_description || "Imagem"}
-          className="rounded"
-        />
+    <SearchSty className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      {columns.map((column, colIndex) => (
+        <div key={colIndex} className="flex flex-col gap-4">
+          {column.map((img) => (
+            <Image
+              key={img.id}
+              src={img.urls.small}
+              alt={img.alt_description || "Imagem"}
+              width={300}
+              height={200}
+              className="rounded object-cover w-full"
+            />
+          ))}
+        </div>
       ))}
     </SearchSty>
   );

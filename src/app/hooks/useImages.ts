@@ -1,29 +1,33 @@
-import { useState, useEffect } from "react";
-import { imageprops } from "../types/imag";
+import { useEffect, useState } from "react";
+import { imageprops } from "@/app/types/imag";
 
-export function useImages(query: string = "random") {
+export function useImageSearch(query: string) {
   const [images, setImages] = useState<imageprops[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    async function fetchImages() {
+    const fetchImages = async () => {
+      setLoading(true);
+      setError(false);
       try {
-        const response = await fetch(`/api/photos?query=${query}`);
-        if (!response.ok) {
-          throw new Error("Erro ao buscar imagens");
+        const res = await fetch(`/api/photos?query=${query}`);
+        if (!res.ok) {
+          throw new Error(`Erro HTTP: ${res.status}`);
         }
-        const data = await response.json();
-        console.log(data)
+        const data = await res.json();
         setImages(data);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      } catch (err: any) {
-        setError(err.message);
+      } catch (err) {
+        console.error("Erro ao buscar imagens:", err);
+        setError(true);
       } finally {
         setLoading(false);
       }
+    };
+
+    if (query) {
+      fetchImages();
     }
-    fetchImages();
   }, [query]);
 
   return { images, loading, error };
