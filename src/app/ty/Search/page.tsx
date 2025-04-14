@@ -16,7 +16,7 @@ export default function SearchPage() {
       <Header />
       <Nav />
       <Wind>
-        <h2>Resultados para: &quot;{query}&quot;</h2>
+        <h2>Resultados para: &quot;<span>{query}</span>&quot;</h2>
         <div className="mainWin">
           <ImageResults query={query} />
 
