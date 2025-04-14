@@ -10,4 +10,8 @@ export const Wind = styled.div `
   justify-content: center;
   margin: 5em 5em 4em 5em;
   gap: 1.8em;
+
+  .mainWin {
+    width: 100%;
+  }
 `
