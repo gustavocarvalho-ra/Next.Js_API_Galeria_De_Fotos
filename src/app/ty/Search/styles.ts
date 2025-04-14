@@ -15,7 +15,7 @@ export const Wind = styled.div `
     color: var(--text-grey-ter);
     
     span {
-      color: #6494ff;
+      color: var(--blue-light);
     }
   }
 
