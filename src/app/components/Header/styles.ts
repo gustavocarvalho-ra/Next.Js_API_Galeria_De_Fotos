@@ -75,5 +75,8 @@ export const Head = styled.div `
 
   .hr {
     width: 100%;
+    height: .1vh;
+    border: none;
+    background: var(--blue-light);
   }
 `
