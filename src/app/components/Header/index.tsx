@@ -29,7 +29,7 @@ export default function Header() {
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Pesquisar imagens..."
+              placeholder="Pesquisa de imagens"
             />
           </form>
         </div>
