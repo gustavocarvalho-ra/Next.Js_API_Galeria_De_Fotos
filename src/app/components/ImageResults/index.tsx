@@ -29,7 +29,7 @@ export default function ImageResults({ query }: Props) {
   return (
     <SearchSty className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       {columns.map((column, colIndex) => (
-        <div key={colIndex} className="flex flex-col gap-4">
+        <div key={colIndex} className="cl">
           {column.map((img) => (
             <Link key={img.id} href={img.urls.full} target='_blank'>
               <ImageDiv

@@ -5,4 +5,10 @@ export const SearchSty = styled.div `
   grid-gap: 1.4em;
   grid-template-columns: repeat(3, 1fr);
   align-items: start;
+
+  .cl {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+  }
 `
