@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import { useImageSearch } from './../../hooks/useImages';
 import { SearchSty } from "./styles";
 import { ImageDiv } from '../ImageDiv';
+import Link from 'next/link';
 
 interface Props {
   query: string;
@@ -30,10 +31,12 @@ export default function ImageResults({ query }: Props) {
       {columns.map((column, colIndex) => (
         <div key={colIndex} className="flex flex-col gap-4">
           {column.map((img) => (
-            <ImageDiv
-              key={img.id}
-              imageUrl={img.urls.small}
-            />
+            <Link key={img.id} href={img.urls.full} target='_blank'>
+              <ImageDiv
+                key={img.id}
+                imageUrl={img.urls.small}
+              />
+            </Link>
           ))}
         </div>
       ))}
