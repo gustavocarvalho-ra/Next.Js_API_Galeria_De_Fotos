@@ -21,5 +21,7 @@ export const Wind = styled.div `
 
   .mainWin {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 `
