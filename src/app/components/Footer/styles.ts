@@ -9,7 +9,7 @@ export const Foot = styled.div `
   justify-content: space-evenly;
   color: var(--text-grey-ter);
   cursor: default;
-  position: absolute;
+  position: sticky;
   bottom: 0px;
 
   h3 {
