@@ -30,7 +30,7 @@ export const NavBar = styled.div `
       bottom: -2px;
       width: 100%;
       height: 1px;
-      background: var(--text-grey-ter);
+      background: var(--blue-light);
       transform: scaleX(0);
       transform-origin: right;
       transition: transform .4s;
