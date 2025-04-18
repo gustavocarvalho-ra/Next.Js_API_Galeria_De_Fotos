@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Wind = styled.div `
   width: 95%;
-  height: 100%;
+  min-height: 74.3vh;
   /* background-color: red; */
   display: flex;
   flex-wrap: wrap;
