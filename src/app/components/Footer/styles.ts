@@ -28,7 +28,7 @@ export const Foot = styled.div `
       display: flex;
       align-items: center;
       font-size: 1.5em;
-      color: var(--text-grey-ter);
+      color: var(--blue-light);
       transition: all .3s;
 
       &:hover {
