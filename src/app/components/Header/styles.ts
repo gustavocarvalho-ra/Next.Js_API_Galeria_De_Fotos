@@ -68,6 +68,8 @@ export const Head = styled.div `
 
           @media (max-width: 440px) {
             width: 80%;
+            font-size: .8em;
+            font-weight: 400;
           }
         }
   
