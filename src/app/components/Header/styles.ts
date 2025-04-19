@@ -26,6 +26,11 @@ export const Head = styled.div `
       &:hover {
         color: var(--text-grey-qua);
       }
+
+      @media (max-width: 440px) {
+        width: 50%;
+        font-size: 1em;
+      }
     }
 
     .search {
@@ -33,6 +38,10 @@ export const Head = styled.div `
       height: 100%;
       display: flex;
       align-items: center;
+
+      @media (max-width: 440px) {
+        justify-content: flex-end;
+      }
 
       form {
         width: 50%;
@@ -42,6 +51,10 @@ export const Head = styled.div `
         color: var(--text-grey-ter);
         border: none;
         border-radius: 8px;
+        
+        @media (max-width: 440px) {
+          width: 100%;
+        }
 
         input {
           width: 90%;
