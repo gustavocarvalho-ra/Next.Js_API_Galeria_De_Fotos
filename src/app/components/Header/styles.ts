@@ -41,6 +41,7 @@ export const Head = styled.div `
 
       @media (max-width: 440px) {
         justify-content: flex-end;
+        margin-right: 1em;
       }
 
       form {
@@ -64,6 +65,10 @@ export const Head = styled.div `
           border: none;
           outline: 0;
           font-size: 1em;
+
+          @media (max-width: 440px) {
+            width: 80%;
+          }
         }
   
         .lup {
@@ -79,6 +84,10 @@ export const Head = styled.div `
             position: relative;
             font-size: 1.5em;
             color: #fff;
+
+            @media (max-width: 440px) {
+              font-size: 1em;
+            }
           }
         }
       }
