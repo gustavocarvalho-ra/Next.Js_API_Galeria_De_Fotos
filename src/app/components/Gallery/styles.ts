@@ -17,6 +17,10 @@ export const Gall = styled.div `
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
 
+    @media (max-width: 440px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     .cln {
       display: flex;
       flex-direction: column;
