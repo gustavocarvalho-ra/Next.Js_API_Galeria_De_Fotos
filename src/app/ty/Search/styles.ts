@@ -13,6 +13,10 @@ export const Wind = styled.div `
 
   h2 {
     color: var(--text-grey-ter);
+
+    @media (max-width: 440px) {
+      font-size: 1em;
+    }
     
     span {
       color: var(--blue-light);
