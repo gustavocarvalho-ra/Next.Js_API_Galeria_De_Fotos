@@ -9,6 +9,10 @@ export const NavBar = styled.div `
   padding-left: 1em;
   gap: 2em;
 
+  @media (max-width: 440px) {
+    display: none;
+  }
+
   a {
     height: 100%;
     text-decoration: none;
