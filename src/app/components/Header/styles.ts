@@ -8,6 +8,10 @@ export const Head = styled.div `
   align-items: center;
   flex-direction: column;
 
+  @media (max-width: 440px) {
+    height: 4.5vh;
+  }
+
   .cont {
     width: 100%;
     display: flex;
