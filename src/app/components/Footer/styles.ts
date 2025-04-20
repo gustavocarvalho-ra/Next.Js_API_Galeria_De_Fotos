@@ -12,6 +12,10 @@ export const Foot = styled.div `
   position: sticky;
   bottom: 0px;
 
+  @media (max-width: 440px) {
+    font-size: .8em
+  }
+
   h3 {
     font-size: .8em;
   }
