@@ -10,3 +10,4 @@
 
 ### - v3 
 - Adicionar perfil de usuário 
+- Adicionar avaliações 
