@@ -15,7 +15,7 @@ export async function GET(req: Request) {
       return NextResponse.json({ error: result.errors }, { status: 400});
     }
 
-    return NextResponse.json(result.response.results);
+    return NextResponse.json(result.response?.results ?? []);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return NextResponse.json({ error: "Erro ao buscar imagens" }, { status: 500 });
