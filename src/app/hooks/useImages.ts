@@ -16,7 +16,9 @@ export function useImageSearch(query: string) {
           throw new Error(`Erro HTTP: ${res.status}`);
         }
         const data = await res.json();
-        setImages(data);
+        console.log("Dados recebidos da API:", data)
+        setImages(Array.isArray(data) ? data : []);
+        // setImages(data);
       } catch (err) {
         console.error("Erro ao buscar imagens:", err);
         setError(true);
