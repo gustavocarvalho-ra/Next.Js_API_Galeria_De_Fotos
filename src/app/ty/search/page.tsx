@@ -1,11 +1,14 @@
 "use client";
-
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+
 import ImageResults from "@/app/components/ImageResults";
 import Header from "@/app/components/Header";
 import Nav from "@/app/components/Nav";
 import Footer from "@/app/components/Footer";
+
 import { Wind } from "./styles";
+
 
 export default function SearchPage() {
   const searchParams = useSearchParams();
