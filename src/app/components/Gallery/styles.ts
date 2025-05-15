@@ -28,6 +28,11 @@ export const Gall = styled.div `
     
       .image {
         display: flex;
+        transition: all .5s;
+
+        &:hover {
+          scale: 1.02;
+        }
   
         a {
           width: 100%;
