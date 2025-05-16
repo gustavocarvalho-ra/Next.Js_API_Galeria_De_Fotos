@@ -14,6 +14,7 @@ export const NavBar = styled.div `
   }
 
   a {
+    padding: .8em;
     height: 100%;
     text-decoration: none;
     font-weight: 800;
@@ -45,11 +46,11 @@ export const NavBar = styled.div `
       transform-origin: left;
       transition: transform .4s;
     }
-
   }
 
   a.active {
-    color: red;
+    color: var(--blue-light);
+    background: var(--background);
   }
 
   a.active::after {
