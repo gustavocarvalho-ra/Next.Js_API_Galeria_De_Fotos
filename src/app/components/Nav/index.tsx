@@ -1,10 +1,14 @@
 import Link from "next/link";
 import { NavBar } from "./styles";
+import { usePathname } from "next/navigation";
+import clsx from "clsx"
 
 export default function Nav() {
+  const path = usePathname();
+
   return (
     <NavBar>
-      <Link href={"../../ty/foto"}>Foto</Link>
+      <Link href={"../../ty/foto"} className={clsx(NavBar.link, { [NavBar.active]: path === "../../ty/foto"})}>Foto</Link>
       <Link href={"../../ty/wallpapers"}>Wallpaper</Link>
       <Link href={"../../ty/textura"}>Textura</Link>
       <Link href={"../../ty/universo"}>Universo</Link>
