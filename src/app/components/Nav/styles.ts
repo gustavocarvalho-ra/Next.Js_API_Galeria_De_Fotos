@@ -52,10 +52,4 @@ export const NavBar = styled.div `
     color: var(--blue-light);
     background: var(--background);
   }
-
-  a.active::after {
-    color: red;
-    transform: scateX(1);
-    transform-origin: left;
-  }
 `
