@@ -8,7 +8,7 @@ export default function Nav() {
 
   return (
     <NavBar>
-      <Link href={"../../ty/foto"} className={clsx(NavBar.link, { [NavBar.active]: path === "../../ty/foto"})}>Foto</Link>
+      <Link href={"/ty/foto"} className={clsx({ active: path === "/ty/foto" })}>Foto</Link>
       <Link href={"../../ty/wallpapers"}>Wallpaper</Link>
       <Link href={"../../ty/textura"}>Textura</Link>
       <Link href={"../../ty/universo"}>Universo</Link>

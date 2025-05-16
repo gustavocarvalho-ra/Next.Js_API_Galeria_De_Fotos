@@ -46,12 +46,15 @@ export const NavBar = styled.div `
       transition: transform .4s;
     }
 
-    &.active {
-      color: var(--second-background);
-    }
+  }
 
-    &.active::after {
-      color: red;
-    }
+  a.active {
+    color: red;
+  }
+
+  a.active::after {
+    color: red;
+    transform: scateX(1);
+    transform-origin: left;
   }
 `
