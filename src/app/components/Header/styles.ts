@@ -93,6 +93,10 @@ export const Head = styled.div `
             font-size: 1.5em;
             color: #fff;
 
+            &:hover {
+              color: var(--blue-light);
+            }
+
             @media (max-width: 440px) {
               font-size: 1em;
             }
