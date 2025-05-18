@@ -20,6 +20,7 @@ export default function Nav() {
       <Link href={"/ty/viagem"} className={clsx({ active: path === "/ty/viajem" })}>Viagem</Link>
       <Link href={"/ty/flor"} className={clsx({ active: path === "/ty/flor" })}>Flor</Link>
       <Link href={"/ty/moda"} className={clsx({ active: path === "/ty/moda" })}>Moda</Link>
+      <Link href={"/ty/tecnologia"} className={clsx({ active: path === "/ty/tecnologia" })}>Tecnologia</Link>
     </NavBar>
   )
 }
