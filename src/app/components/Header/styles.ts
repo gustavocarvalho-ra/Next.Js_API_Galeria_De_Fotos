@@ -56,9 +56,11 @@ export const Head = styled.div `
         color: var(--text-grey-ter);
         border: none;
         border-radius: 8px;
+        margin-left: 10em;
         
         @media (max-width: 440px) {
           width: 100%;
+          margin: none;
         }
 
         input {
